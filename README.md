@@ -2,7 +2,13 @@
 
 Thank you for your hardwork([shiffman](https://github.com/shiffman), [cvalenzuela](https://github.com/cvalenzuela), & [yining1023](https://github.com/yining1023))
 
-Check it out here: [https://sleepy-maker.github.io/fast_style_transfer_in_p5ML/webcam/](https://sleepy-maker.github.io/fast_style_transfer_in_p5ML/webcam/)
+Check it out here: 
+
+image uploader version  
+[https://sleepy-maker.github.io/fast_style_transfer_in_p5ML/imguploader/](https://sleepy-maker.github.io/fast_style_transfer_in_p5ML/imguploader/)  
+  
+Webcam version  
+[https://sleepy-maker.github.io/fast_style_transfer_in_p5ML/webcam/](https://sleepy-maker.github.io/fast_style_transfer_in_p5ML/webcam/)  
 
 
 # Fast Style Transfer in [p5ML](https://github.com/ITPNYU/p5-deeplearn-js)
