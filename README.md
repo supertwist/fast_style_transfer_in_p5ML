@@ -4,10 +4,11 @@ Thank you for your hardwork([shiffman](https://github.com/shiffman), [cvalenzuel
 
 Check it out here: 
 
-[image uploader version]  
+#### image uploader version
 [https://sleepy-maker.github.io/fast_style_transfer_in_p5ML/imguploader/](https://sleepy-maker.github.io/fast_style_transfer_in_p5ML/imguploader/)  
   
-[Webcam version]  
+
+#### Webcam version
 [https://sleepy-maker.github.io/fast_style_transfer_in_p5ML/webcam/](https://sleepy-maker.github.io/fast_style_transfer_in_p5ML/webcam/)  
 
 
