@@ -1,0 +1,63 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Fast Style Transfer p5ml</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="libraries/p5.min.js"></script>
+  <script src="libraries/p5.dom.min.js"></script>
+  <script src="libraries/p5ml.min.js"></script>
+  <script src="libraries/jquery-3.2.1.slim.min.js"></script>
+  <script src="libraries/bootstrap.min.js"></script>
+
+  <style>
+    img {
+    width: 250px;
+    height: 250px;
+  }
+
+  #style-img {
+    text-align: center;
+    width: 100px;
+    height: 100px;
+    
+  }
+  </style>
+</head>
+
+<script src="sketch.js"></script>
+
+<body>
+  <h1>Fast Style Transfer ImgUploader</h1>
+  <div class="container" id="mainContainer">
+    <div class="row">
+      <div class="col-sm" id="canvasContainer">
+        <h4>image</h4>
+      </div>
+      <div class="col-sm" id="styleContainer">
+        <div class="container">
+          <h4>styles</h4>
+          <p id="selectDiscription">select one style</p>
+          <div class="row style-row">
+              <img id="style-img" src='images/wave.jpg' onclick="applyStyle(0)"/>
+              <img id="style-img" src='images/la_muse.jpg' onclick="applyStyle(1)"/>
+          </div>
+          <div class="row style-row">
+              <img id="style-img" src='images/rain_princess.jpg' onclick="applyStyle(2)"/>
+              <img id="style-img" src='images/scream.jpg' onclick="applyStyle(3)"/>
+          </div>
+          <div class="row style-row">
+              <img id="style-img" src='images/udnie.jpg' onclick="applyStyle(4)"/>
+              <img id="style-img" src='images/wreck.jpg' onclick="applyStyle(5)"/>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm" id="outputContainer">
+        <h4>output</h4>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
