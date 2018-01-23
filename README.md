@@ -2,7 +2,7 @@
 
 Thank you for your hardwork([shiffman](https://github.com/shiffman), [cvalenzuela](https://github.com/cvalenzuela), & [yining1023](https://github.com/yining1023))
 
-Check it out here: 
+Check it out here: Both of them don't store any data from you!  
 
 #### image uploader version
 [https://sleepy-maker.github.io/fast_style_transfer_in_p5ML/imguploader/](https://sleepy-maker.github.io/fast_style_transfer_in_p5ML/imguploader/)  
