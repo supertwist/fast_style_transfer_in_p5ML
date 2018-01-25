@@ -2,16 +2,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Fast Style Transfer Test</title>
+  <title>Fast Style Transfer Demo</title>
   <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/style.css">
   <script src="libraries/p5.min.js"></script>
   <script src="libraries/p5.dom.min.js"></script>
   <script src="libraries/p5ml.min.js"></script>
   
   <script src="libraries/jquery-3.2.1.slim.min.js"></script>
-  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="libraries/bootstrap.min.js"></script>
+
+  <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
+  <link rel="stylesheet" href="css/style.css">
+
   <!-- todo -->
   <!-- put bootstarp files in lib folder -->
   <!-- todo -->
@@ -33,35 +36,67 @@
 <script src="sketch.js"></script>
 
 <body>
-  <h1>Fast Style Transfer Webcam</h1>
-  <div class="container" id="mainContainer">
-    <div class="row">
-      <div class="col-sm" id="canvasContainer">
-        <h4>webcam</h4>
+
+    <section class="jumbotron text-center">
+      <div class="container">
+        <h1 class="jumbotron-heading">Fast Style Transfer with a camera</h1>
+        <!-- <br> -->
+        <p class="text-muted">Fast Style Transfer is using your camera</p>
+        <br>
+        <!-- <h4 id="styleInfo" class="lead text-muted"></h4> -->
+        <br>
+        <div class="row">
+          <div class="col"></div>
+          <div id="textInfo" class="col-10 speech-bubble text-muted"></div>
+          <div class="col"></div>
+        </div>
       </div>
-      <div class="col-sm" id="styleContainer">
+    </section>
+
+    <div class="container">
+      
+    </div>
+    
+  <div class="container" id="mainContainer">
+    <div class="row justify-content-md-center">
+
+      <div class="row col-sm-4 justify-content-md-center" id="canvasContainer">
+        <h4 class="lead text-muted">CAMERA</h4>
+      </div>
+
+      <div class="row col-sm-4 justify-content-md-center" id="styleContainer">
+        <h4 class="lead text-muted">STYLE</h4>  
         <div class="container">
-          <h4>styles</h4>
-          <p id="selectDiscription">select one style</p>
-          <div class="row style-row">
+          <div class="row style-row justify-content-md-center">
               <img id="style-img" src='images/wave.jpg' onclick="applyStyle(0)"/>
               <img id="style-img" src='images/la_muse.jpg' onclick="applyStyle(1)"/>
           </div>
-          <div class="row style-row">
+          <div class="row style-row justify-content-md-center">
               <img id="style-img" src='images/rain_princess.jpg' onclick="applyStyle(2)"/>
               <img id="style-img" src='images/scream.jpg' onclick="applyStyle(3)"/>
           </div>
-          <div class="row style-row">
+          <div class="row style-row justify-content-md-center">
               <img id="style-img" src='images/udnie.jpg' onclick="applyStyle(4)"/>
               <img id="style-img" src='images/wreck.jpg' onclick="applyStyle(5)"/>
           </div>
         </div>
       </div>
-      <div class="col-sm" id="outputContainer">
-        <h4>output</h4>
+
+      <div class="row col-sm-4 justify-content-md-center" id="outputContainer">
+        <h4 class="lead text-muted">OUTPUT</h4>
       </div>
+
     </div>
+
+    <br><br><br>
+    <h2 id="styleInfo" class="lead text-muted"></h2>
   </div>
+
+<!-- <footer class="footer text-muted">
+      <div class="container">
+        <p></p>
+      </div>
+  </footer> -->
 </body>
 
 </html>

@@ -7,7 +7,10 @@ Fast Style Transfer Webcam test
 let net
 let outputImgData
 let styles = ["wave", "la_muse", "rain_princess", "scream", "udnie", "wreck"]
+let artists = ["Katsushika Hokusai", "Pablo Picasso", "Leonid Afremov", "Edvard Munch", "Francis Picabia", "J.M.W. Turner"]
 let video
+
+let textInfo, styleInfo
 
 function setup() {
   createCanvas(300, 300).parent('outputContainer')
@@ -15,6 +18,14 @@ function setup() {
   video.size(300,300)
   video.parent('canvasContainer')
   //video.hide()
+  textInfo = createDiv('Take a photo for your portrait!');
+  textInfo.parent('#textInfo');
+  styleInfo = createSpan('...'); 
+  styleInfo.parent('#styleInfo'); 
+}
+
+function draw(){
+  //mouseover the style icons -> tell style info. and add it to 'styleInfo'
 }
 
 function modelLoaded() {
@@ -32,7 +43,10 @@ function modelLoaded() {
    5 wrecl
 */
 function applyStyle(typeNum) {
-   net = new p5ml.TransformNet(modelLoaded, 'wave', 'models/' + styles[typeNum] + "/");  
+   net = new p5ml.TransformNet(modelLoaded, 'wave', 'models/' + styles[typeNum] + "/"); 
+   print("Start processing"); 
+   textInfo.html('Start processing now.  Wait a few seconds for drawing!');
+   styleInfo.html('If '+ artists[typeNum] +' drew your portrait, How did it look like?');
 }
 
 // render image
@@ -51,4 +65,7 @@ function renderToCanvas(outputImgData) {
     }
   }
   updatePixels();
+  print("finish processing"); 
+  textInfo.html('Finish processing. Let\'s try again!');
+
 }
