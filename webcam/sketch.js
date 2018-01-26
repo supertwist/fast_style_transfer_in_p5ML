@@ -30,7 +30,7 @@ function draw(){
 
 function modelLoaded() {
   outputImgData = net.predict(video.elt);
-  renderToCanvas(outputImgData)
+  renderToCanvas(outputImgData);
 }
 
 /*
@@ -43,7 +43,9 @@ function modelLoaded() {
    5 wrecl
 */
 function applyStyle(typeNum) {
-   net = new p5ml.TransformNet(modelLoaded, 'wave', 'models/' + styles[typeNum] + "/"); 
+  setTimeout(()=>{
+      net = new p5ml.TransformNet(modelLoaded, 'wave', 'models/' + styles[typeNum] + "/")
+  }, 5000);
    print("Start processing"); 
    textInfo.html('Start processing now.  Wait a few seconds for drawing!');
    styleInfo.html('If '+ artists[typeNum] +' drew your portrait, How did it look like?');
