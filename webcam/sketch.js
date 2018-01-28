@@ -52,7 +52,7 @@ function applyStyle(typeNum) {
     textSize(200);
     text(count, width/2, height/1.4);
     count++;
-    if(count>5) {
+    if(count>3) {
       console.log("take photo");
       clearInterval(id);
       print("Start processing"); 
