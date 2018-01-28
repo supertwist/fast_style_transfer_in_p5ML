@@ -6,7 +6,7 @@ Fast Style Transfer Webcam test
 
 let net
 let outputImgData
-let styles = ["wave", "la_muse", "rain_princess", "scream", "udnie", "wreck"]
+let styles = ["wave", "la_muse", "rain_princess", "scream", "udnie", "wreck", "khalo"]
 let artists = ["Katsushika Hokusai", "Pablo Picasso", "Leonid Afremov", "Edvard Munch", "Francis Picabia", "J.M.W. Turner"]
 let video
 
@@ -43,12 +43,24 @@ function modelLoaded() {
    5 wrecl
 */
 function applyStyle(typeNum) {
-  setTimeout(()=>{
-      net = new p5ml.TransformNet(modelLoaded, 'wave', 'models/' + styles[typeNum] + "/")
-  }, 5000);
-   print("Start processing"); 
-   textInfo.html('Start processing now.  Wait a few seconds for drawing!');
-   styleInfo.html('If '+ artists[typeNum] +' drew your portrait, How did it look like?');
+  // timer function
+  let count = 0;
+  let id = setInterval(() => {
+    console.log(count);
+    background(220);
+    textAlign(CENTER);
+    textSize(200);
+    text(count, width/2, height/1.4);
+    count++;
+    if(count>5) {
+      console.log("take photo");
+      clearInterval(id);
+      print("Start processing"); 
+      net = new p5ml.TransformNet(modelLoaded, 'wave', 'models/' + styles[typeNum] + "/");
+      textInfo.html('Start processing now.  Wait a few seconds for drawing!');
+      styleInfo.html('If '+ artists[typeNum] +' drew your portrait, How did it look like?');
+    }
+  },1000);
 }
 
 // render image
