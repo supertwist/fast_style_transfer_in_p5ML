@@ -1,0 +1,19 @@
+{
+  "name": "fast_style_transfer_in_p5ml",
+  "version": "1.0.0",
+  "description": "Thank you for your hardwork([shiffman](https://github.com/shiffman), [cvalenzuela](https://github.com/cvalenzuela), & [yining1023](https://github.com/yining1023))",
+  "main": "sketch.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/supertwist/fast_style_transfer_in_p5ML.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/supertwist/fast_style_transfer_in_p5ML/issues"
+  },
+  "homepage": "https://github.com/supertwist/fast_style_transfer_in_p5ML#readme"
+}
